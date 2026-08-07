@@ -134,8 +134,7 @@ $$
 ### 3.5 空间梯度：体现扰动的空间方向
 
 $$
-\left.\frac{\partial T_V^{(i,j)}}{\partial S_{ij}}\right|_t
-=
+\left.\frac{\partial T_V^{(i,j)}}{\partial S_{ij}}\right|_t=
 \left(
 \frac{T_S^i}{M(\delta_i)}-
 \frac{T_S^j}{M(\delta_j)}
