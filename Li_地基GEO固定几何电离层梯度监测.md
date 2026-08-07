@@ -61,6 +61,7 @@ T_S=
 \right].
 $$
 
+
 | 符号 | 含义 |
 |---|---|
 | $T_S$ | 沿卫星—接收机视线的斜向总电子含量（STEC） |
@@ -78,14 +79,17 @@ M(\delta)=
 \frac{1}{\sqrt{1-\left(\frac{R_e\cos\delta}{R_e+h}\right)^2}},
 $$
 
+
 $$
 T_S^i=M(\delta_i)\,T_V^i+b_{\mathrm{R,DCB}}+b_{\mathrm{S,DCB}}+\varepsilon,
 $$
+
 
 $$
 T_V^i=
 \frac{T_S^i-b_{\mathrm{R,DCB}}-b_{\mathrm{S,DCB}}}{M(\delta_i)}+\xi.
 $$
+
 
 | 符号 | 含义 |
 |---|---|
@@ -104,11 +108,13 @@ $$
 =\frac{1}{M(\delta_i)}I_{\mathrm{ROT}}^i,
 $$
 
+
 $$
 I_{\mathrm{ROT}}^i=
 \frac{T_S^i(t_2)-T_S^i(t_1)}{t_2-t_1},
 \qquad \Delta t=30\ \mathrm{s}.
 $$
+
 
 前后两个历元的差主要反映真实时间演化，而不是卫星运动导致的采样位置变化。它可显示 EIA 的增长/衰减、EPB 的快速波动或 TID 波前的通过。
 
@@ -121,6 +127,7 @@ I_{\mathrm{ROTI}}^i=
 -\left\langle I_{\mathrm{ROT}}^i\right\rangle^2
 }.
 $$
+
 
 尖括号表示 5 min 时间窗内的平均。ROT 是 TEC 的变化率；ROTI 是 ROT 在短时间窗内的标准差。ROTI 大说明 TEC 变化很不规则，常用于标记 EPB 等小尺度扰动。它能说明“扰动强不强”，但不能直接给出**扰动的空间方向与边界**；这正是空间梯度场的补充价值。
 
@@ -136,12 +143,14 @@ $$
 +\frac{\Delta\xi}{S_{ij}}.
 $$
 
+
 $$
 \nabla T_V^{(i,j)}(t)=
 \left|
 \left.\frac{\partial T_V^{(i,j)}}{\partial S_{ij}}\right|_t
 \right|.
 $$
+
 
 | 符号 | 含义 |
 |---|---|
@@ -161,6 +170,7 @@ $$
 \left.\frac{\partial T_V^{(i,j)}}{\partial y}\right|_t
 =\nabla T_V^{(i,j)}(t)\cos\theta_{ij}.
 $$
+
 
 其中 $x$ 为向东、$y$ 为向北。
 
@@ -184,6 +194,7 @@ $$
 \frac{\partial^2 T_V^{(i,j)}}{\partial t\,\partial x},
 $$
 
+
 $$
 \frac{\partial^2 T_V^{(i,j)}}{\partial y\,\partial t}
 \approx
@@ -198,6 +209,7 @@ $$
 \frac{\partial^2 T_V^{(i,j)}}{\partial t\,\partial y}.
 $$
 
+
 **直观理解**：不同位置的 TEC 变化速度相差多少，即时间演化在空间上的不均匀性。若 TEC 场在时空上平滑演化，混合偏导可以交换次序，两种计算应近似一致；文中将它们的差作为非线性或不连续过程的指标。
 
 **物理解释**：平静背景或 EIA 早期的平滑发展更接近线性、可交换；EPB 的产生、漂移和耗散会造成强烈的时空耦合，混合导数不对称性增大，会破坏其本身的连续性。因此该量是一个**时空连续性/非线性诊断量**。
@@ -211,6 +223,7 @@ $$
 -\left\langle\nabla T_V\right\rangle^2
 }.
 $$
+
 
 多条不同方向、不同长度的 IPP 间基线，都在该格网附近对 TEC 空间变化作出了估计，对同一格网内这些梯度样本求平均，得到该格网的空间梯度场。若同一格网内多个梯度样本的离散度很大，说明格网内仍有未被完全分辨的细结构；该统计量帮助判断是否足以描述局地变化，而不是把格网均值误认为真实均匀场。**如果主导尺度比较大这个标准差应该表现出0值附近，如果尺度比较小有很多细节则会表现出较大值**
 
