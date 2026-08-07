@@ -180,7 +180,7 @@ w_i(t)=
 ```math
 m^{\ast}(t)
 =
-\operatorname*{arg\,min}_{0 \leq m \leq 7}
+\arg \min_{0 \leq m \leq 7}
 \left|
 \sum_{k=0}^{m} p_k(t)\,\tilde d_i^{\,m-k}(t)
 - I_i^S(t-1)
