@@ -133,22 +133,26 @@ $$
 
 ### 3.5 空间梯度：体现扰动的空间方向
 
-$$
-\left.\frac{\partial T_V^{(i,j)}}{\partial S_{ij}}\right|_t=
+```math
+\left.\frac{\partial T_V^{(i,j)}}{\partial S_{ij}}\right|_{t}
+=
 \left(
-\frac{T_S^i}{M(\delta_i)}-
+\frac{T_S^i}{M(\delta_i)}
+-
 \frac{T_S^j}{M(\delta_j)}
-\right)\frac{1}{S_{ij}}
-+\frac{\Delta\xi}{S_{ij}}.
-$$
+\right)
+\frac{1}{S_{ij}}
++
+\frac{\Delta \xi}{S_{ij}}.
+```
 
-
-$$
-\nabla T_V^{(i,j)}(t)=
+```math
+\nabla T_V^{(i,j)}(t)
+=
 \left|
-\left.\frac{\partial T_V^{(i,j)}}{\partial S_{ij}}\right|_t
+\left.\frac{\partial T_V^{(i,j)}}{\partial S_{ij}}\right|_{t}
 \right|.
-$$
+```
 
 
 | 符号 | 含义 |
