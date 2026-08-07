@@ -178,11 +178,13 @@ w_i(t)=
 ### 4.6 自适应选择多项式阶数
 
 ```math
-m^*(t)=
-\underset{0\leq m\leq7}{\operatorname{arg\,min}}
+m^{\ast}(t)
+=
+\operatorname*{arg\,min}_{0 \leq m \leq 7}
 \left|
-\sum_{k=0}^{m}p_k(t)\,\tilde d_i^{\,m-k}(t)-I_i^S(t-1)
-\right|.
+\sum_{k=0}^{m} p_k(t)\,\tilde d_i^{\,m-k}(t)
+- I_i^S(t-1)
+\right|
 ```
 
 
